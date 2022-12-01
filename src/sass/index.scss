@@ -5,10 +5,10 @@
 
 @import './components/common';
 @import './components/container';
-@import './components/header-btn';
+@import './components/btn';
 
-@import './layouts/header';
-@import './layouts/header-above';
-@import './layouts/header-below';
-@import './layouts/header-dropdown-menu';
+@import './layouts/header/header';
+@import './layouts/header/header-above';
+@import './layouts/header/header-below';
+@import './layouts/header/header-dropdown-menu';
 @import './layouts/footer';
