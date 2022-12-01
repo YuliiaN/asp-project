@@ -1,5 +1,14 @@
-@import './components/common';
 @import './utils/reset';
 @import './utils/mixin';
 @import './utils/variables';
 @import './utils/visually-hidden';
+
+@import './components/common';
+@import './components/container';
+@import './components/header-btn';
+
+@import './layouts/header';
+@import './layouts/header-above';
+@import './layouts/header-below';
+@import './layouts/header-dropdown-menu';
+@import './layouts/footer';

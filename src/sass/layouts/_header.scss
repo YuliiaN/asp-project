@@ -1,0 +1,52 @@
+// header blocks
+
+.header {
+  position: relative;
+  background-color: $bcg-secondary-color;
+}
+
+// header grey underline
+
+.header::before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 130px;
+  top: 80px;
+  left: 0;
+  background-color: $text-color;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 1090px;
+  top: 80px;
+  right: 0;
+  background-color: $text-color;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+// icons size
+
+.header__contacts-icon,
+.header__login-icon,
+.header__input-icon,
+.header__cart-icon {
+  width: 24px;
+  height: 24px;
+}
+
+// hover nav links
+
+.header__nav-link:hover,
+.header__nav-link:focus {
+  color: $accent-color;
+}

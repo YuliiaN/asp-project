@@ -1,0 +1,20 @@
+.header__menu-list {
+  @include transition(gap);
+
+  &:hover {
+    gap: 5px;
+  }
+}
+
+.header__menu-item {
+  @include transition(all);
+
+  &:hover {
+    padding: 15px 20px;
+    background-color: #47484a;
+  }
+}
+
+.header__sub-menu {
+  display: none;
+}

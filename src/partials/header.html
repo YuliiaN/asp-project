@@ -1,0 +1,120 @@
+<header class="header">
+  <div class="container header__container">
+    <div class="logo header__logo">
+      <a href="/">
+        <img
+          srcset="
+            ./images/logo/logo@1x-min.png 1x,
+            ./images/logo/logo@2x-min.png 2x
+          "
+          src="./images/logo/logo@1x-min.png"
+          alt="logo"
+          class="logo__pic"
+        />
+      </a>
+    </div>
+    <div class="header__wrap">
+      <div class="header__above">
+        <nav class="nav header__nav">
+          <ul class="nav__list header__nav-list">
+            <li class="nav__item header__nav-item">
+              <a href="" class="header__nav-link">О нас</a>
+            </li>
+            <li class="nav__item header__nav-item">
+              <a href="" class="header__nav-link">Оплата и доставка</a>
+            </li>
+            <li class="nav__item header__nav-item">
+              <a href="" class="header__nav-link">Возврат товара</a>
+            </li>
+            <li class="nav__item header__nav-item">
+              <a href="" class="header__nav-link">Как заказать</a>
+            </li>
+            <li class="nav__item header__nav-item">
+              <a href="" class="header__nav-link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__contacts">
+          <svg class="header__contacts-icon">
+            <use href="./images/icons.svg#icon-phone"></use>
+          </svg>
+          <a href="tel:+380505077272" class="header__contacts-link"
+            ><span class="header__contacts-tel">+38 050 507 72 72</span>
+            <span class="header__contacts-text">Заказать звонок</span></a
+          >
+        </div>
+        <button type="button" class="header__btn header__lang-btn">
+          <span>RU</span>
+          <svg class="header__lang-icon">
+            <use href="./images/icons.svg#icon-arrow-down"></use>
+          </svg>
+        </button>
+        <button type="button" class="header__btn header__login-btn">
+          <svg class="header__login-icon">
+            <use href="./images/icons.svg#icon-login"></use>
+          </svg>
+          <span>Войти</span>
+        </button>
+      </div>
+      <div class="header__below">
+        <nav class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <span>ТЕХНИКА</span>
+              <svg class="header__menu-icon">
+                <use href="./images/icons.svg#icon-arrow-down"></use>
+              </svg>
+              <ul class="header__sub-menu">
+                <li></li>
+                <li></li>
+              </ul>
+            </li>
+            <li class="header__menu-item">
+              <span>ЗАПЧАСТИ</span>
+              <svg class="header__menu-icon">
+                <use href="./images/icons.svg#icon-arrow-down"></use>
+              </svg>
+              <ul class="header__sub-menu">
+                <li></li>
+                <li></li>
+              </ul>
+            </li>
+            <li class="header__menu-item">
+              <span>СЕРВИС</span>
+              <svg class="header__menu-icon">
+                <use href="./images/icons.svg#icon-arrow-down"></use>
+              </svg>
+              <ul class="header__sub-menu">
+                <li></li>
+                <li></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <form class="header__form">
+          <label name="search"
+            ><input
+              type="search"
+              name="search"
+              placeholder="Поиск"
+              class="header__input"
+          /></label>
+          <button type="button" class="header__btn header__input-btn">
+            <svg class="header__input-icon">
+              <use href="./images/icons.svg#icon-search"></use>
+            </svg>
+          </button>
+        </form>
+        <button type="button" class="header__btn header__cart-btn">
+          <div class="header__cart-wrap">
+            <svg class="header__cart-icon">
+              <use href="./images/icons.svg#icon-cart"></use>
+            </svg>
+            <span class="header__cart-good">2</span>
+          </div>
+          <span class="header__cart-text">2 506 ₴</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

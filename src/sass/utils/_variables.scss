@@ -1,8 +1,7 @@
 // text properties
 
-$font-family: Roboto, sans-serif;
-$secondary-font-family: Open Sans, sans-serif;
-$line-height: 1.5;
+$font-family: 'Roboto', sans-serif;
+$secondary-font-family: 'Open Sans', sans-serif;
 
 // colors
 
@@ -10,10 +9,13 @@ $main-color: #ffffff;
 $title-color: #222223;
 $text-color: #6c6e70;
 $accent-color: #499bf8;
+$placeholder-text-color: #adb1b5;
 
 // bcg
 
 $bcg-color: #ffffff;
+$bcg-secondary-color: #222223;
+$header-dropdown-menu: #47484a;
 $bcg-btn-color: linear-gradient(90deg, #3371b8 0%, #2482ee 100%);
 
 // others

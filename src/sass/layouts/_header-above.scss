@@ -1,0 +1,80 @@
+// header above
+
+.header__above {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 31px;
+  padding: 18px 0;
+
+  font-size: 14px;
+}
+
+// header nav
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header__nav-link {
+  padding: 15px 0;
+
+  color: $main-color;
+  text-decoration: none;
+
+  @include transition(color);
+}
+
+// header contacts
+
+.header__contacts {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.header__contacts-link {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 14px;
+  color: $accent-color;
+  text-decoration: none;
+
+  .header__contacts-tel {
+    font-family: $secondary-font-family;
+    font-weight: 700;
+    font-size: 16px;
+    color: $main-color;
+  }
+}
+
+// lang
+
+.header__lang-btn {
+  cursor: pointer;
+}
+
+.header__lang-icon {
+  width: 10px;
+  height: 10px;
+}
+
+// login
+
+.header__login-btn {
+  cursor: pointer;
+}
+
+.header__login-icon {
+  fill: currentColor;
+
+  @include transition(color);
+
+  .header__login-btn:hover & {
+    color: $main-color;
+  }
+}
