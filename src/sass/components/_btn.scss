@@ -1,6 +1,6 @@
 // header btn
 
-.header__btn {
+.header-btn {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -14,7 +14,7 @@
 
 // transparent btn
 
-.btn {
+.transparent-btn {
   padding: 11.5px 41.5px;
   background-color: transparent;
   border: 3px solid $accent-color;
@@ -23,6 +23,39 @@
   font-size: 14px;
   color: $main-color;
   text-align: center;
+}
 
-  cursor: pointer;
+// filled button
+
+.fl-btn {
+  width: 218px;
+  height: 44px;
+  padding: 11.5px;
+  background: $bcg-btn-color;
+  border: none;
+  border-radius: 10px;
+
+  color: $main-color;
+}
+
+// modal btn
+
+.modal-btn {
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 24px;
+  height: 24px;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+
+  .modal__icon {
+    width: 15.5px;
+    height: 15.5px;
+  }
 }

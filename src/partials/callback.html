@@ -1,0 +1,38 @@
+<div class="backdrop is-hidden-callback" data-modal-callback>
+  <div class="callback__modal">
+    <button
+      type="button"
+      class="modal-btn callback__close-btn"
+      data-modal-close-callback
+    >
+      <svg class="modal__icon">
+        <use href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+    <h2 class="callback__title">Обратный звонок</h2>
+    <form class="callback__form">
+      <label name="mail"
+        ><input
+          type="text"
+          name="mail"
+          class="callback__input"
+          placeholder="E-mail"
+      /></label>
+      <label name="phone"
+        ><input
+          type="text"
+          name="phone"
+          class="callback__input"
+          placeholder="Телефон"
+      /></label>
+      <label name="comment">
+        <textarea
+          name="comment"
+          class="callback__input callback__comment"
+          placeholder="Ваше сообщение"
+        ></textarea>
+      </label>
+      <button type="submit" class="fl-btn callback__btn">Отправить</button>
+    </form>
+  </div>
+</div>
