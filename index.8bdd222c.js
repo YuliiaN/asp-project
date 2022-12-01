@@ -1,0 +1,2 @@
+!function(){var a={openModalBtn:document.querySelector("[data-modal-open-callback]"),closeModalBtn:document.querySelector("[data-modal-close-callback]"),modal:document.querySelector("[data-modal-callback]")};function l(){a.modal.classList.toggle("is-hidden-callback")}a.openModalBtn.addEventListener("click",l),a.closeModalBtn.addEventListener("click",l)}();
+//# sourceMappingURL=index.8bdd222c.js.map
