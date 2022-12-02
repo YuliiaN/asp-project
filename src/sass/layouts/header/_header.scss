@@ -9,6 +9,18 @@
   }
 }
 
+.header__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.header__mob-wrap {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+
 // header grey underline
 
 .header::before {
@@ -39,11 +51,8 @@
 }
 
 .header__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   @include mq(desk) {
+    align-items: center;
     gap: 40px;
   }
 }

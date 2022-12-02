@@ -1,9 +1,8 @@
 .hero {
   padding-top: 99px;
-  padding-bottom: 179px;
-  background-color: rgba(216, 112, 147, 0.48);
+  padding-bottom: 204px;
 
-  background-image: url('../images/bcg/bcg@1x-min.jpg');
+  background-image: url('../images/bcg/bcg-mob@1x-min.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -11,10 +10,24 @@
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url('../images/bcg/bcg@2x-min.jpg');
+    background-image: url('../images/bcg/bcg-mob@2x-min.jpg');
   }
 
   font-size: 20px;
+
+  @include mq(desk) {
+    padding-top: 99px;
+    padding-bottom: 179px;
+
+    background-image: url('../images/bcg/bcg@1x-min.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/bcg/bcg@2x-min.jpg');
+    }
+  }
 }
 
 .hero__sale-text {
