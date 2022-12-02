@@ -1,0 +1,47 @@
+.hero {
+  padding-top: 99px;
+  padding-bottom: 179px;
+  background-color: rgba(216, 112, 147, 0.48);
+
+  background-image: url('../images/bcg/bcg@1x-min.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/bcg/bcg@2x-min.jpg');
+  }
+
+  font-size: 20px;
+}
+
+.hero__sale-text {
+  position: relative;
+  margin-bottom: 6px;
+
+  font-family: $secondary-font-family;
+  font-weight: 700;
+  font-size: 36px;
+
+  &::after {
+    content: '-5%';
+    position: absolute;
+    top: 25%;
+    left: 161px;
+
+    width: 84px;
+    height: 34px;
+    background-color: $error;
+    border-radius: 10px;
+
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+.hero__btn {
+  width: 170px;
+  margin-top: 20px;
+}

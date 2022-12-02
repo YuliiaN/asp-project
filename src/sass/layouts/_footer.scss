@@ -1,6 +1,11 @@
 .footer {
-  padding: 50px 0 30px;
+  display: none;
   background-color: $bcg-secondary-color;
+
+  @include mq(desk) {
+    display: block;
+    padding: 50px 0 30px;
+  }
 }
 
 .footer__container {

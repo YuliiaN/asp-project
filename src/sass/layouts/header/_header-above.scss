@@ -4,36 +4,77 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 31px;
-  padding: 18px 0;
+  gap: 19px;
 
-  font-size: 14px;
+  @include mq(desk) {
+    gap: 31px;
+    padding: 18px 0;
+
+    font-size: 14px;
+  }
+}
+
+// logo
+
+.header__logo-pic {
+  @include mq(mob-only) {
+    width: 84px;
+    height: 42px;
+  }
 }
 
 // header nav
 
-.header__nav-list {
+.header__nav {
+  display: none;
+}
+
+.header__nav.is-open .header__nav-list {
   display: flex;
-  align-items: center;
-  gap: 32px;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.header__nav-list {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+
+  width: calc(100% - 20px);
+  height: 100%;
+  background-color: #47484a;
+
+  @include mq(desk) {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
 }
 
 .header__nav-link {
-  padding: 15px 0;
-
-  color: $main-color;
+  color: #d3d7db;
   text-decoration: none;
-
   @include transition(color);
+
+  @include mq(desk) {
+    padding: 15px 0;
+    color: $main-color;
+  }
 }
 
 // header contacts
 
 .header__contacts {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  flex-wrap: nowrap;
+  display: none;
+
+  @include mq(desk) {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
 }
 
 .header__contacts-link {
@@ -54,12 +95,28 @@
 
 // lang
 
+.header__lang-btn {
+  display: none;
+
+  @include mq(desk) {
+    display: inline-block;
+  }
+}
+
 .header__lang-icon {
   width: 10px;
   height: 10px;
 }
 
 // login
+
+.header__login-text {
+  display: none;
+
+  @include mq(desk) {
+    display: inline;
+  }
+}
 
 .header__login-icon {
   fill: currentColor;
@@ -68,5 +125,45 @@
 
   .header__login-btn:hover & {
     color: $main-color;
+  }
+}
+
+// mob menu
+
+.header__mob-btn {
+  display: none;
+  z-index: 999;
+
+  @include mq(mob-only) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 26px;
+    height: 18px;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.header__mob-icon {
+  width: 26px;
+  height: 18px;
+  fill: $accent-color;
+}
+
+.header__icon-close {
+  display: block;
+
+  .header__mob-btn.is-open & {
+    display: none;
+  }
+}
+
+.header__icon-open {
+  display: none;
+
+  .header__mob-btn.is-open & {
+    display: block;
   }
 }

@@ -1,7 +1,11 @@
 .container {
-  width: 1170px;
-  padding-left: 15px;
-  padding-right: 15px;
+  width: 300px;
   margin: 0 auto;
   outline: 1px beige solid;
+
+  @include mq(desk) {
+    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }

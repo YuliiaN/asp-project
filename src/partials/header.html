@@ -9,13 +9,13 @@
           "
           src="./images/logo/logo@1x-min.png"
           alt="logo"
-          class="logo__pic"
+          class="header__logo-pic logo__pic"
         />
       </a>
     </div>
     <div class="header__wrap">
       <div class="header__above">
-        <nav class="nav header__nav">
+        <nav class="nav header__nav" id="menu-container" data-menu>
           <ul class="nav__list header__nav-list">
             <li class="nav__item header__nav-item">
               <a href="" class="header__nav-link">О нас</a>
@@ -53,8 +53,38 @@
           <svg class="header__login-icon">
             <use href="./images/icons.svg#icon-login"></use>
           </svg>
-          <span>Войти</span>
+          <span class="header__login-text">Войти</span>
         </button>
+
+        <!-- кнопка моб меню ниже -->
+
+        <button
+          type="button"
+          class="header__mob-btn is-open"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            class="header__mob-icon"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              href="./images/icons.svg#icon-mob-menu"
+              class="header__icon-open"
+              width="26"
+              height="18"
+            ></use>
+            <use
+              href="./images/icons.svg#icon-close"
+              class="header__icon-close"
+              width="15.5"
+              height="15.5"
+            ></use>
+          </svg>
+        </button>
+
+        <!-- кнопка моб меню выше -->
       </div>
       <div class="header__below">
         <nav class="header__menu">

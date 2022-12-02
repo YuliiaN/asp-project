@@ -3,35 +3,49 @@
 .header {
   position: relative;
   background-color: $bcg-secondary-color;
+
+  @include mq(mob-only) {
+    padding: 8px 0;
+  }
 }
 
 // header grey underline
 
 .header::before {
-  content: '';
-  position: absolute;
-  height: 1px;
-  width: 130px;
-  top: 80px;
-  left: 0;
-  background-color: $text-color;
+  @include mq(desk) {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 130px;
+    top: 80px;
+    left: 0;
+    background-color: $text-color;
+  }
 }
 
 .header::after {
   content: '';
   position: absolute;
   height: 1px;
-  width: 1090px;
-  top: 80px;
+  width: 100%;
+  top: 56px;
   right: 0;
   background-color: $text-color;
+
+  @include mq(desk) {
+    width: 1090px;
+    top: 80px;
+  }
 }
 
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+
+  @include mq(desk) {
+    gap: 40px;
+  }
 }
 
 // icons size

@@ -1,11 +1,15 @@
 // header below
 
 .header__below {
-  display: flex;
-  align-items: center;
-  gap: 30px;
+  display: none;
 
-  font-size: 16px;
+  @include mq(desk) {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    font-size: 16px;
+  }
 }
 
 // header menu
