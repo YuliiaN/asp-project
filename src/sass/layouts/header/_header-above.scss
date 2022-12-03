@@ -6,9 +6,8 @@
   align-items: center;
 
   @include mq(desk) {
-    gap: 31px;
-    padding: 18px 0;
-
+    justify-content: flex-end;
+    gap: 32px;
     font-size: 14px;
   }
 }
@@ -16,32 +15,23 @@
 // logo
 
 .header__logo {
-  @include mq(mob-only) {
-    display: flex;
-    justify-content: flex-start;
-    width: 84px;
-    height: 42px;
-  }
-}
-
-.header__logo-pic {
-  @include mq(mob-only) {
-    width: 84px;
-    height: 42px;
+  @include mq(not-desk) {
+    display: none;
   }
 }
 
 // header nav
 
 .header__nav {
-  @include mq(mob-only) {
+  @include mq(not-desk) {
     display: none;
   }
-  @include mq(desk) {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-  }
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
 .header__nav-link {
@@ -58,13 +48,21 @@
 // header contacts
 
 .header__contacts {
-  display: none;
+  @include mq(mob-only) {
+    display: none;
+  }
 
-  @include mq(desk) {
+  @include mq(tab) {
     display: flex;
     gap: 10px;
     align-items: center;
     flex-wrap: nowrap;
+
+    margin-right: 52px;
+  }
+
+  @include mq(desk) {
+    margin-right: 0;
   }
 }
 
@@ -87,10 +85,17 @@
 // lang
 
 .header__lang-btn {
-  display: none;
+  @include mq(mob-only) {
+    display: none;
+  }
+
+  @include mq(tab) {
+    margin-right: 25px;
+  }
 
   @include mq(desk) {
     display: inline-block;
+    margin-right: 0;
   }
 }
 
@@ -101,11 +106,15 @@
 
 // login
 
-.header__login-text {
-  display: none;
+.header__login-btn {
+  @include mq(tab-only) {
+    margin-right: 33px;
+  }
+}
 
-  @include mq(desk) {
-    display: inline;
+.header__login-text {
+  @include mq(mob-only) {
+    display: none;
   }
 }
 

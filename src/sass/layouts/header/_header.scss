@@ -2,17 +2,47 @@
 
 .header {
   position: relative;
+  padding: 8px 0;
   background-color: $bcg-secondary-color;
 
-  @include mq(mob-only) {
-    padding: 8px 0;
+  @include mq(tab) {
+    padding: 9px 0 10px;
+  }
+
+  @include mq(desk) {
+    padding: 18px 0 11px;
+  }
+}
+
+.header__container {
+  @include mq(desk) {
+    display: flex;
+    align-items: center;
   }
 }
 
 .header__wrap {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
+
+  @include mq(tab) {
+    gap: 19px;
+  }
+
+  @include mq(desk) {
+    gap: 30px;
+  }
+}
+
+.header__tab-wrap {
+  @include mq(tab) {
+    display: flex;
+  }
+
+  @include mq(desk) {
+    gap: 31px;
+  }
 }
 
 .header__mob-wrap {
@@ -43,6 +73,10 @@
   top: 56px;
   right: 0;
   background-color: $text-color;
+
+  @include mq(tab) {
+    top: 50%;
+  }
 
   @include mq(desk) {
     width: 1090px;

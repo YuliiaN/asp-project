@@ -1,9 +1,19 @@
 .container {
-  width: 320px;
+  min-width: 320px;
   padding-left: 10px;
   padding-right: 10px;
   margin: 0 auto;
   outline: 1px beige solid;
+
+  @include mq(mob-only) {
+    max-width: 480px;
+  }
+
+  @include mq(tab) {
+    width: 768px;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
 
   @include mq(desk) {
     width: 1170px;

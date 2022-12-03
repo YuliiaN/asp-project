@@ -1,8 +1,32 @@
-.header__mob-menu {
-  position: relative;
+// затемненный фон
 
-  @include mq(mob-only) {
+.backdrop__mob-menu {
+  display: none;
+
+  @include mq(not-desk) {
+    position: fixed;
     display: none;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 800;
+    background-color: rgb(34, 34, 35, 0.4);
+  }
+}
+
+// видимость самого меню
+
+.backdrop__mob-menu.is-open {
+  @include mq(not-desk) {
+    display: block;
+  }
+}
+
+// геометрия меню
+
+.backdrop__mob-menu.is-open .header__mob-menu {
+  @include mq(not-desk) {
     position: fixed;
     top: 0;
     right: 0;
@@ -13,14 +37,22 @@
     padding: 20px;
     background-color: #47484a;
   }
+
+  @include mq(mob) {
+    min-width: 300px;
+  }
+
+  @include mq(tab) {
+    width: 312px;
+  }
 }
 
-.header__mob-menu.is-open {
-  @include mq(mob-only) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+// разбивка элементов внутри меню
+
+.header__mob-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .header__mob-nav {
@@ -40,13 +72,13 @@
   display: none;
   position: absolute;
   right: 11px;
-  z-index: 999;
+  z-index: 1000;
 
   &.is-open {
     position: static;
   }
 
-  @include mq(mob-only) {
+  @include mq(not-desk) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,6 +112,40 @@
   }
 }
 
+// logo
+
+.header__logo-mob {
+  @include mq(mob) {
+    display: block;
+    display: flex;
+    justify-content: flex-start;
+    width: 84px;
+    height: 42px;
+  }
+
+  @include mq(tab) {
+    display: block;
+    width: 100px;
+    height: 51px;
+  }
+
+  @include mq(desk) {
+    display: none;
+  }
+}
+
+.header__logo-mob-pic {
+  @include mq(mob) {
+    width: 84px;
+    height: 42px;
+  }
+
+  @include mq(tab) {
+    width: 100px;
+    height: 51px;
+  }
+}
+
 // menu title
 
 .header__nav-title {
@@ -87,47 +153,83 @@
   font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
+
+  @include mq(tab) {
+    font-size: 20px;
+  }
 }
 
 // menu above
 
-.header__nav-list {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
+.header__nav-mob-list {
+  @include mq(not-desk) {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
 
-.header__nav-item {
-  position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -10px;
-    width: calc(100% + 20px);
-    height: 1px;
-    background-color: #3a3b3c;
+    font-size: 16px;
   }
 }
 
+.header__nav-mob-item {
+  @include mq(mob-only) {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -10px;
+      width: calc(100% + 20px);
+      height: 1px;
+      background-color: #3a3b3c;
+    }
+  }
+}
+
+// .header__nav-mob-item:not(:first-child) {
+//   @include mq(tab-only) {
+//     &::before {
+//       content: '';
+//       position: absolute;
+//       top: -50%;
+//       left: -10px;
+//       width: calc(100% + 20px);
+//       height: 1px;
+//       background-color: #3a3b3c;
+//     }
+//   }
+// }
+
 // menu lang
 
-.header__mob-menu.is-open .header__lang-btn {
+.backdrop__mob-menu.is-open .header__lang-btn {
   display: inline-flex;
 }
 
 // menu below
 
-.header__mob-menu.is-open .header__menu-list {
-  @include mq(mob-only) {
+.backdrop__mob-menu.is-open .header__menu-list {
+  @include mq(mob) {
     display: flex;
     gap: 10px;
 
     font-size: 14px;
   }
+
+  @include mq(tab) {
+    display: none;
+  }
 }
 
 .header__menu-item {
   padding: 0;
+}
+
+// lang btn
+
+.header__lang-menu-btn {
+  @include mq(tab-only) {
+    display: none;
+  }
 }

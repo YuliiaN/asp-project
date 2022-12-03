@@ -1,6 +1,6 @@
 <header class="header">
   <div class="container header__container">
-    <!-- <div class="logo header__logo">
+    <div class="logo header__logo">
       <a href="/">
         <img
           srcset="
@@ -12,10 +12,10 @@
           class="header__logo-pic logo__pic"
         />
       </a>
-    </div> -->
+    </div>
     <div class="header__wrap">
       <div class="header__above">
-        <div class="logo header__logo">
+        <div class="logo header__logo-mob">
           <a href="/">
             <img
               srcset="
@@ -24,7 +24,7 @@
               "
               src="./images/logo/logo@1x-min.png"
               alt="logo"
-              class="header__logo-pic logo__pic"
+              class="header__logo-mob-pic logo__pic"
             />
           </a>
         </div>
@@ -47,58 +47,60 @@
             </li>
           </ul>
         </nav>
-        <div class="header__contacts">
-          <svg class="header__contacts-icon">
-            <use href="./images/icons.svg#icon-phone"></use>
-          </svg>
-          <a href="tel:+380505077272" class="header__contacts-link"
-            ><span class="header__contacts-tel">+38 050 507 72 72</span>
-            <span class="header__contacts-text">Заказать звонок</span></a
-          >
-        </div>
-        <button type="button" class="header-btn header__lang-btn">
-          <span>RU</span>
-          <svg class="header__lang-icon">
-            <use href="./images/icons.svg#icon-arrow-down"></use>
-          </svg>
-        </button>
-        <div class="header__mob-wrap">
-          <button type="button" class="header-btn header__login-btn">
-            <svg class="header__login-icon">
-              <use href="./images/icons.svg#icon-login"></use>
+        <div class="header__tab-wrap">
+          <div class="header__contacts">
+            <svg class="header__contacts-icon">
+              <use href="./images/icons.svg#icon-phone"></use>
             </svg>
-            <span class="header__login-text">Войти</span>
-          </button>
-
-          <!-- кнопка моб меню ниже -->
-
-          <button
-            type="button"
-            class="header__mob-btn is-open"
-            aria-expanded="false"
-            aria-controls="menu-container"
-            data-menu-button
-          >
-            <svg
-              class="header__mob-icon"
-              aria-label="Переключатель мобильного меню"
+            <a href="tel:+380505077272" class="header__contacts-link"
+              ><span class="header__contacts-tel">+38 050 507 72 72</span>
+              <span class="header__contacts-text">Заказать звонок</span></a
             >
-              <use
-                href="./images/icons.svg#icon-mob-menu"
-                class="header__icon-open"
-                width="26"
-                height="18"
-              ></use>
-              <use
-                href="./images/icons.svg#icon-close"
-                class="header__icon-close"
-                width="15.5"
-                height="15.5"
-              ></use>
+          </div>
+          <button type="button" class="header-btn header__lang-btn">
+            <span>RU</span>
+            <svg class="header__lang-icon">
+              <use href="./images/icons.svg#icon-arrow-down"></use>
             </svg>
           </button>
+          <div class="header__mob-wrap">
+            <button type="button" class="header-btn header__login-btn">
+              <svg class="header__login-icon">
+                <use href="./images/icons.svg#icon-login"></use>
+              </svg>
+              <span class="header__login-text">Войти</span>
+            </button>
 
-          <!-- кнопка моб меню выше -->
+            <!-- кнопка моб меню ниже -->
+
+            <button
+              type="button"
+              class="header__mob-btn is-open"
+              aria-expanded="false"
+              aria-controls="menu-container"
+              data-menu-button
+            >
+              <svg
+                class="header__mob-icon"
+                aria-label="Переключатель мобильного меню"
+              >
+                <use
+                  href="./images/icons.svg#icon-mob-menu"
+                  class="header__icon-open"
+                  width="26"
+                  height="18"
+                ></use>
+                <use
+                  href="./images/icons.svg#icon-close"
+                  class="header__icon-close"
+                  width="15.5"
+                  height="15.5"
+                ></use>
+              </svg>
+            </button>
+
+            <!-- кнопка моб меню выше -->
+          </div>
         </div>
       </div>
       <div class="header__below">
@@ -163,91 +165,3 @@
     </div>
   </div>
 </header>
-
-<div class="nav header__mob-menu" id="menu-container" data-menu>
-  <div class="header__mob-nav">
-    <p class="header__nav-title">Меню</p>
-    <ul class="header__menu-list">
-      <li class="header__menu-item">
-        <span class="header__menu-title">Техника</span>
-        <svg class="header__menu-icon">
-          <use href="./images/icons.svg#icon-arrow-down"></use>
-        </svg>
-        <ul class="header__sub-menu">
-          <li></li>
-          <li></li>
-        </ul>
-      </li>
-      <li class="header__menu-item">
-        <span class="header__menu-title">Запчасти</span>
-        <svg class="header__menu-icon">
-          <use href="./images/icons.svg#icon-arrow-down"></use>
-        </svg>
-        <ul class="header__sub-menu">
-          <li></li>
-          <li></li>
-        </ul>
-      </li>
-      <li class="header__menu-item">
-        <span class="header__menu-title">Сервис</span>
-        <svg class="header__menu-icon">
-          <use href="./images/icons.svg#icon-arrow-down"></use>
-        </svg>
-        <ul class="header__sub-menu">
-          <li></li>
-          <li></li>
-        </ul>
-      </li>
-    </ul>
-
-    <ul class="nav__list header__nav-list">
-      <li class="nav__item header__nav-item">
-        <a href="" class="header__nav-link">О нас</a>
-      </li>
-      <li class="nav__item header__nav-item">
-        <a href="" class="header__nav-link">Оплата и доставка</a>
-      </li>
-      <li class="nav__item header__nav-item">
-        <a href="" class="header__nav-link">Возврат товара</a>
-      </li>
-      <li class="nav__item header__nav-item">
-        <a href="" class="header__nav-link">Как заказать</a>
-      </li>
-      <li class="nav__item header__nav-item">
-        <a href="" class="header__nav-link">Контакты</a>
-      </li>
-    </ul>
-  </div>
-  <div class="header__mob-contacts">
-    <ul class="footer__sm-list">
-      <li class="footer__sm-item">
-        <a
-          href="https://www.youtube.com/"
-          class="footer__sm-link"
-          rel="noopener norefferer nofollow"
-          target="_blank"
-        >
-          <svg class="footer__sm-icon">
-            <use href="./images/icons.svg#icon-youtube"></use></svg
-        ></a>
-      </li>
-      <li class="footer__sm-item">
-        <a
-          href="https://www.facebook.com/"
-          class="footer__sm-link"
-          rel="noopener norefferer nofollow"
-          target="_blank"
-        >
-          <svg class="footer__sm-icon">
-            <use href="./images/icons.svg#icon-facebook"></use></svg
-        ></a>
-      </li>
-    </ul>
-    <button type="button" class="header-btn header__lang-btn">
-      <span>RU</span>
-      <svg class="header__lang-icon">
-        <use href="./images/icons.svg#icon-arrow-down"></use>
-      </svg>
-    </button>
-  </div>
-</div>
